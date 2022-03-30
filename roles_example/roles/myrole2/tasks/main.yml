@@ -1,0 +1,22 @@
+---
+# tasks file for myrole2
+- name: install nginx on server2
+  apt: 
+    name: nginx
+    state: latest
+- name: copy png to server2
+  copy:
+    src: "us.png"
+    dest: /var/www/html
+  notify: 
+    - restart nginx on server2
+- name: "copy index.j2 to server2"
+  template:
+     src: index.j2
+     dest: /var/www/html/index.html
+  notify:
+    - restart nginx on server2
+- debug: var=ansible_default_ipv4.address
+
+
+

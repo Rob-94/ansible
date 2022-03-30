@@ -1,0 +1,9 @@
+---
+# handlers file for myrole2
+- name: restart nginx on server2
+  service:
+    name: nginx
+    state: restarted
+
+
+

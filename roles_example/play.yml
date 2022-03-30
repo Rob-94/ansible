@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: yes
+  roles:
+    - { role: myrole1, when: ansible_default_ipv4.address == "172.31.92.25" }
+    - { role: myrole2, when: ansible_default_ipv4.address  == "172.31.82.76" }  

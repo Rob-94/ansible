@@ -1,0 +1,5 @@
+[server]
+server1 ansible_host=54.166.187.119     ansible_ssh_private_key_file=xx.pem
+server2 ansible_host=18.205.157.154     ansible_ssh_private_key_file=xx.pem
+
+
