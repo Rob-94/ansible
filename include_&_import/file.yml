@@ -1,0 +1,13 @@
+
+---
+- name: create file 
+  copy: 
+    dest: "/home/ubuntu/ansible/folder{{ item }}/file{{ item }}"
+    content: |
+      - "line {{ item }}  in file from {{ owner }}"
+  loop:
+    - 1
+    - 2
+    - 3
+
+

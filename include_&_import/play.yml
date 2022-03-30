@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    owner: robert
+  tasks:
+  - name:
+    ping:
+  - import_tasks: dir.yml
+  - include: file.yml

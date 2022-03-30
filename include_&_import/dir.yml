@@ -1,0 +1,12 @@
+
+---
+- name: create direcories
+  file:
+    path: "/home/ubuntu/ansible/{{ item }}"
+    state: directory
+  loop:
+    - folder1
+    - folder2
+    - folder3
+
+
